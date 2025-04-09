@@ -59,14 +59,14 @@ if __name__ == "__main__":
     guiWindow.resizable(False, False)
     guiWindow.configure(bg="#F6F5F2")  # Soft background
 
-    # Database setup
+    
     the_connection = sql.connect('listOfTasks.db')
     the_cursor = the_connection.cursor()
     the_cursor.execute('CREATE TABLE IF NOT EXISTS tasks (title TEXT)')
 
     tasks = []
 
-    # Frames & Layout
+    
     functions_frame = Frame(guiWindow, bg="#FFFFFF", bd=2, relief="groove")
     functions_frame.pack(padx=20, pady=20, fill="both", expand=True)
 
@@ -149,7 +149,7 @@ if __name__ == "__main__":
     )
     exit_button.pack(pady=(0, 10))
 
-    # Load data
+    
     retrieve_database()
     list_update()
 
